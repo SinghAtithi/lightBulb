@@ -1,0 +1,60 @@
+<!-- made with love -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lightBulb</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="button-text-wrapper">
+      <div class="off">
+        <h1 id="OFF">OFF</h1>
+      </div>
+      <!-- <div class="on">
+          <h1 id="ON">ON</h1>
+      </div> -->
+      <div class="button-box">
+        <label>
+            <input type="checkbox"  id="button-checkbox">
+          <!-- <input type="checkbox" id="button-checkbox"> -->
+          <div class="button"></div>
+        </label>
+      </div>
+      <div class="on">
+          <h1>ON</h1>
+      </div>
+    </div>
+    <div class="bulb1">
+        <img id="bulb1"src="./images/bulb-1-off.png" alt="">
+    </div>
+    <div class="bulb2">
+        <img id="bulb2"src="./images/bulb-2-off.png" alt="">
+    </div>
+    <div class="bulb3">
+        <img id="bulb3"src="./images/bulb-3-off.png" alt="">
+    </div>
+
+    <script>
+        document.getElementById("button-checkbox").addEventListener("click",function(){
+            if(this.checked){
+                // alert("hii")
+                document.getElementById("bulb1").setAttribute("src","./images/bulb-1-on.png");
+                document.getElementById("bulb2").setAttribute("src","./images/bulb-2-on.png");
+                document.getElementById("bulb3").setAttribute("src","./images/bulb-3-on.png");
+            }
+            else{
+                document.getElementById("bulb1").setAttribute("src","./images/bulb-1-off.png");
+                document.getElementById("bulb2").setAttribute("src","./images/bulb-2-off.png");
+                document.getElementById("bulb3").setAttribute("src","./images/bulb-3-off.png");
+            }
+        })
+        
+
+    </script>
+
+
+  </body>
+</html>
